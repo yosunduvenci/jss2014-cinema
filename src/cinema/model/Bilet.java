@@ -2,35 +2,56 @@ package cinema.model;
 
 public class Bilet {
 
+	private int id;
 	private Saat saat;
 	private Salon salon;
-	private int x;
-	private int y;
+	private int row;
+	private int col;
 	
+	
+	
+	public Bilet(int id, Saat saat, Salon salon, int row, int col) {
+		super();
+		this.id = id;
+		this.saat = saat;
+		this.salon = salon;
+		this.row = row;
+		this.col = col;
+	}
+	
+	
+	public Bilet(Saat saat, Salon salon, int row, int col) {
+		super();
+		this.saat = saat;
+		this.salon = salon;
+		this.row = row;
+		this.col = col;
+	}
+
+
+	public int getId() {
+		return id;
+	}
 	public Saat getSaat() {
 		return saat;
-	}
-	public void setSaat(Saat saat) {
-		this.saat = saat;
 	}
 	public Salon getSalon() {
 		return salon;
 	}
-	public void setSalon(Salon salon) {
-		this.salon = salon;
+	public int getRow() {
+		return row;
 	}
-	public int getX() {
-		return x;
+	public int getCol() {
+		return col;
 	}
-	public void setX(int x) {
-		this.x = x;
+
+	@Override
+	public String toString() {
+		return "Bilet [id=" + id + ", saat=" + saat + ", salon=" + salon
+				+ ", row=" + row + ", col=" + col + "]";
 	}
-	public int getY() {
-		return y;
-	}
-	public void setY(int y) {
-		this.y = y;
-	}
+	
+	
 	
 	
 }
